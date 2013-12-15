@@ -15,11 +15,6 @@ class Dummy(models.Model):
 
     objects = DummyManager()
 
-    def __str__(self):
-        return mark_safe("""
-          <img src="{}{}" style="height: 200px; width: 300px;" />
-        """.format(settings.MEDIA_URL, self.image))
-
 
 class Results(models.Model):
     choices = models.ManyToManyField(Dummy)
