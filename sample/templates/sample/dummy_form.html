@@ -1,0 +1,7 @@
+Hi!
+
+<a href="{% url 'picker' %}">picker</a>
+<form enctype="multipart/form-data" method="POST">{% csrf_token %}
+{{ form }}
+<input type="submit" />
+</form>
